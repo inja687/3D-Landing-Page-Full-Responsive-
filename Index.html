@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Website</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <img class="image-gradient" src="./asset/gradient.png" alt="gradient" />
+  <div class="layer-blur"></div>
+
+  <div class="container">
+    <header>
+      <div class="logo">Injamamul</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Contact</a>
+        <button class="btn-signin">Sign In</button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="tag-box">
+          <div class="tag"><span style="color: violet;">INTRODUCING</span></div>
+        </div>
+
+        <div class="content">
+          <span>EMAIL</span>
+          <span>FOR</span>
+          <span>DEVELOPER</span>
+        </div>
+
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates porro deleniti facilis dolores at, rerum possimus eveniet eligendi eum.
+        </p>
+
+        <div class="buttons">
+          <a href="#" class="btn-get-started">Get Started</a>
+          <button class="btn-signing-main">Sign In</button>
+        </div>
+      </div>
+
+      <!-- ✅ Spline Viewer working -->
+      <div class="spline-container">
+        <spline-viewer class="spline-3d" url="https://prod.spline.design/cUaInmjcT8OZT7Fm/scene.splinecode"></spline-viewer>
+      </div>
+    </main>
+  </div>
+
+  <!-- ✅ Keep script at bottom -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
